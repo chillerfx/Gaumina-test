@@ -1,0 +1,22 @@
+{
+  "name": "gaumina-registration",
+  "version": "1.0.0",
+  "description": "My *test-task* for front-end developer position @Gaumina",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chillerfx/Gaumina-test.git"
+  },
+  "author": "Arturas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chillerfx/Gaumina-test/issues"
+  },
+  "homepage": "https://github.com/chillerfx/Gaumina-test#readme",
+  "devDependencies": {
+    "normalize.css": "^4.1.1"
+  }
+}
