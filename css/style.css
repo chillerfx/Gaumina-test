@@ -47,4 +47,5 @@ body {
     box-sizing: border-box;
     background-color : #2d8479;
     background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-11515.jpg");
+    background-size: cover;
     }
