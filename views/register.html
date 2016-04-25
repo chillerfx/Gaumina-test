@@ -6,21 +6,33 @@
             <p>{{message}}</p>
         </div>
         <fieldset>
-
-            <input type="firstname" name="firstname" placeholder="First Name" ng-model="user.firstname" required/>
-            <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched"> First
-                Name should be present</p>
-            <input type="lastname" name="lastname" placeholder="Last Name" ng-model="user.lastname" required/>
-            <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched"> Last Name
-                should be present</p>
-
-            <input type="email" name="email" placeholder="Email" ng-model="user.email"/>
-            <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">Must be a Valid
-                Email</p>
-            <input type="password" name="password" placeholder="Password" ng-model="user.password" required/>
-            <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">Password
-                cant be null</p>
+            <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
+            <label>Vardas</label>
+            <hr>
         </fieldset>
+        <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched"> First
+            Name should be present</p>
+        <fieldset>
+            <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
+            <label>Pavardė</label>
+            <hr>
+        </fieldset>
+        <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched"> Last Name
+            should be present</p>
+        <fieldset>
+            <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
+            <label>El. paštas</label>
+            <hr>
+        </fieldset>
+        <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">Must be a Valid
+            Email</p>
+        <fieldset>
+            <input type="password" name="password" placeholder="Slaptažodis" ng-model="user.password" required/>
+            <label>Slaptažodis</label>
+            <hr>
+        </fieldset>
+        <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">Password
+            cant be null</p>
         <button type="submit" ng-disabled="myform.$invalid" class="btn">Register</button>
         <p>or <a ng-href="#/login">Login</a></p>
     </form>

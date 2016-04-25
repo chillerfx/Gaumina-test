@@ -1,51 +1,146 @@
-/*RESET */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body {
+    height: 100%;
+}
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-11515.jpg");
+    background-size:cover;
+    -webkit-filter: blur(16px);
+    -moz-filter: blur(16px);
+    -o-filter: blur(16px);
+    -ms-filter: blur(16px);
+    filter: blur(16px);
+}
+body {
+    background-color : #2d8479;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+h1 {
+    color: white;
+    padding: 29px;
+    font-size: 21px;
+}
+button {
+    color:white;
+    background-color: #0ca890;
+    border: 0;
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+p {
+    color: white;
+}
+a {
+    color: #0ca890;
+}
+form {
+    margin: 20px;
+    padding: 20px;
+}
+fieldset {
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    border: none;
+    overflow: visible;
+}
+fieldset input {
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 10px 8px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #DDD;
+    font-size: 120%;
+    outline: none;
+    cursor: text;
+}
+fieldset input::-webkit-input-placeholder {
+    -webkit-transition: color 300ms ease;
+    transition: color 300ms ease;
+}
+fieldset input:not(:focus)::-webkit-input-placeholder {
+    color: transparent;
+}
+fieldset hr {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: #607D8B;
+    font-size: 1px;
+    will-change: transform, visibility;
+    -webkit-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    visibility: hidden;
+    z-index: 10;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
+fieldset input:focus ~ hr {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible;
 }
-body {
-    line-height: 1;
+fieldset label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 120%;
+    color: #607D8B;
+    -webkit-transform-origin: 0 -150%;
+    transform-origin: 0 -150%;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    pointer-events: none;
 }
-ol, ul {
-    list-style: none;
+fieldset input:focus ~ label,
+fieldset input:valid ~ label {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
 }
-blockquote, q {
-    quotes: none;
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+.row {
+    border-radius: 5px;
+    width: auto;
+    background-color:#354052;
 }
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+.flex-item {
+    text-align: center;
 }
-/*RESET END-RESET */
-body {
-    box-sizing: border-box;
-    background-color : #2d8479;
-    background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-11515.jpg");
-    background-size: cover;
-    }
+.error {
+    color: red;
+    margin:0px;
+    padding-bottom: 10px;
+}
+

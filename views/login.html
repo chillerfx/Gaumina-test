@@ -1,17 +1,25 @@
 <section class="card login">
-  <form name="myform" ng-submit="login()" novalidate>
-    <div class="textintro">
-      <h1>Hi there !</h1>
-      <p> Log-in to access the awesomeness !</p>
-      <p class="message" ng-show="message">{{message}}</p>
-    </div>
-    <fieldset>
-      <input type="email" name="email " placeholder="Email" ng-model="user.email" ng-required="true"/>
-      <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">Must be a Valid Email</p>
-      <input type="password" name="password" ng-model="user.password" placeholder="password" ng-required="true"/>
-    <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">Password cant be null</p>
-    </fieldset>
-    <button type="submit" class="btn" ng-disabled="myform.$invalid">Login</button>
-    <p>or<a ng-href="#/register">Register</a></p>
-  </form>
+    <form name="myform" ng-submit="login()" novalidate>
+        <div class="textintro">
+            <h1>Dalyvaukite atrankoje</h1>
+            <p class="message" ng-show="message">{{message}}</p>
+        </div>
+        <fieldset>
+            <input type="email" name="email " placeholder="El. paštas" ng-model="user.email" ng-required="true"/>
+            <hr>
+            <label>El. paštas</label>
+        </fieldset>
+        <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
+        El. paštas turi būti validus</p>
+        <fieldset>
+            <input type="password" name="password" ng-model="user.password" placeholder="Slaptažodis"
+                   ng-required="true"/>
+            <hr>
+            <label>Slaptažodis</label>
+        </fieldset>
+        <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
+            Slaptažodis negali būti tuščias</p>
+        <button type="submit" class="btn" ng-disabled="myform.$invalid">Prisijungti</button>
+        <p>arba <a ng-href="#/register">užsiregistruokite</a></p>
+    </form>
 </section>
