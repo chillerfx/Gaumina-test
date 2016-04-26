@@ -1,39 +1,46 @@
-<form class="dataform flex-container" name="dataForm" novalidate ng-submit="register()">
+<form class="dataform flex-container" name="dataForm" novalidate ng-submit="submit()">
     <div class="dialog-header">
         <h1>Suveskite asmeninius duomenis</h1>
     </div>
     <div class="container">
     <div class="flex-item f1">
-        <fieldset>
+        <fieldset class="material">
             <input type="text" name="education" placeholder="Išsilavinimas" ng-model="user.education" required/>
+            <hr>
             <label>Išsilavinimas</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
+            <hr>
             <label>Vardas</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
+            <hr>
             <label>Pavardė</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <input type="date" name="birthday" ng-model="user.birthday" required/>
+            <hr>
             <label>Gimimo data</label>
         </fieldset>
-        <fieldset>
+        <fieldset >
             <legend>Lytis</legend>
             <div class="inline-block">
-            <input class="radio-input" type="radio" name="gender" id="male" ng-model="user.gender" value="m"/>
-            <label class="radio-label"  for="male">Vyras</label>
-            <input class="radio-input" type="radio" name="gender" id="female" ng-model="user.gender" value="f"/>
-            <label class="radio-label"  for="female">Moteris</label>
+            <label class="radio-label"  for="male">
+                Vyras
+                <input class="radio-input" type="radio" name="gender" id="male" ng-model="user.gender" value="m"/>
+            </label>
+            <label class="radio-label"  for="female">Moteris
+                <input class="radio-input" type="radio" name="gender" id="female" ng-model="user.gender" value="f"/>
+            </label>
             </div>
         </fieldset>
     </div>
 
     <div class="flex-item f2">
-        <legend>Gimtoji kalba:</legend>
         <fieldset>
+            <legend>Gimtoji kalba:</legend>
             <input value="lt" type="checkbox" checked="checked" name="lt" id="lt" ng-model="user.language.lt"/>
             <label for="lt">LT</label>
 
@@ -43,19 +50,21 @@
             <input value="ru" type="checkbox" name="ru" id="ru" ng-model="user.language.ru"/>
             <label for="ru">RU</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <select ng-model="user.city">
                 <option value="" disabled="disabled" selected="selected">Gyvenamoji vieta</option>
                 <option value="klaipeda">Klaipėda</option>
                 <option value="vilnius">Vilnius</option>
             </select>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <input type="phone" name="phone" placeholder="Telefono nr." ng-model="user.phone" required/>
+            <hr>
             <label>Telefono nr.</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="material">
             <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
+            <hr>
             <label>El. paštas</label>
         </fieldset>
     </div>
@@ -67,36 +76,39 @@
 
     <div class="flex-item f4">
     <h2>Papildoma informacija</h2>
-    <fieldset>
+    <fieldset class="material">
         <input type="text" name="pq" placeholder="Asmeninės savybės" ng-model="user.pq" required/>
+        <hr>
         <label>Asmeninės savybės</label>
     </fieldset>
-    <fieldset>
+    <fieldset class="material">
         <input type="text" name="ph" placeholder="Pomėgiai, hobiai" ng-model="user.pq" required/>
+        <hr>
         <label>Pomėgiai, hobiai</label>
     </fieldset>
     </div>
-
     <div class="flex-item f5">
     <h2>Paskutinė / dabartinė darbovietė</h2>
-    <fieldset>
+    <fieldset class="material">
         <input type="text" name="ei" placeholder="Organizacijos pavadinimas" ng-model="user.ei" required/>
+        <hr>
         <label>Organizacijos pavadinimas</label>
     </fieldset>
-    <fieldset>
+    <fieldset class="material">
         <input type="text" name="et" placeholder="Statusas organizacijoje" ng-model="user.et" required/>
+        <hr>
         <label>Statusas organizacijoje</label>
     </fieldset>
     <legend>Laikotarpis</legend>
-    <fieldset>
+    <fieldset class="material">
         <input type="month" placeholder="Nuo" ng-model="user.from">
         <label>Nuo</label>
     </fieldset>
-    <fieldset>
+    <fieldset class="material">
         <input type="month" placeholder="Nuo" ng-model="user.till">
         <label>Iki</label>
     </fieldset>
-    <fieldset>
+    <fieldset >
         <label class="fw">
             <input type="checkbox" ng-model="user.sw">
             <span class="flipswitch"></span>

@@ -4,33 +4,33 @@
     </div>
     <div class="flex-item">
         <p>{{message}}</p>
-        <fieldset>
+        <fieldset class="material">
             <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
-            <label>Vardas</label>
             <hr>
+            <label>Vardas</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched">
             Trūksta vardo
         </p>
-        <fieldset>
+        <fieldset class="material">
             <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
-            <label>Pavardė</label>
             <hr>
+            <label>Pavardė</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
             Trūksta pavardės
         </p>
-        <fieldset>
+        <fieldset class="material">
             <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
-            <label>El. paštas</label>
             <hr>
+            <label>El. paštas</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
             El. paštas netinkamas</p>
-        <fieldset>
+        <fieldset class="material">
             <input type="password" name="password" placeholder="Slaptažodis" ng-model="user.password" required/>
-            <label>Slaptažodis</label>
             <hr>
+            <label>Slaptažodis</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
             Slaptažodis negali būti tuščias

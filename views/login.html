@@ -2,18 +2,19 @@
     <div class="dialog-header">
         <h1>Dalyvaukite atrankoje</h1>
     </div>
-
     <div class="flex-item">
-        <p>{{messagegit}}</p>
-        <fieldset>
+        <p>{{messagege}}</p>
+        <fieldset class="material">
             <input type="email" name="email " placeholder="El. paštas" ng-model="user.email" ng-required="true"/>
+            <hr>
             <label>El. paštas</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
             El. paštas turi būti validus</p>
-        <fieldset>
+        <fieldset class="material">
             <input type="password" name="password" ng-model="user.password" placeholder="Slaptažodis"
                    ng-required="true"/>
+            <hr>
             <label>Slaptažodis</label>
         </fieldset>
         <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">

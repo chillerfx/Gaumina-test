@@ -29,7 +29,7 @@ myApp.config(['$routeProvider',function($routeProvider)
 	.when('/application',
 	{
 		templateUrl:'views/applicationForm.html',
-		controller:'formController',
+		controller:'RegistrationController',
 		resolve:{
 			currentAuth:function(Authentication)
 			{
