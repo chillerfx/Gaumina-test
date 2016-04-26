@@ -1,9 +1,8 @@
-var myApp=angular.module('myApp',['ngRoute','firebase']).constant('FIREBASE_URL','https://gaumina-registration.firebaseio.com/');
+var myApp=angular.module('myApp',['ngRoute','firebase','flow'])
+	.constant('FIREBASE_URL','https://gaumina-registration.firebaseio.com/');
 
-//CONTROLLLER
 myApp.run(['$rootScope','$location',function($rootScope,$location)
 {
-
 	$rootScope.$on('routeChangeError',
 	function(event,next,previous,error)
 	{

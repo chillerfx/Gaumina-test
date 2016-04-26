@@ -1,40 +1,38 @@
-<section class="card register">
-    <form name="myform" novalidate ng-submit="register()">
-        <div class="textintro">
-            <h1>Registracija</h1>
-        </div>
-        <fieldset>
-            <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
-            <label>Vardas</label>
-            <hr>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched">
-            Trūksta vardo
-        </p>
-        <fieldset>
-            <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
-            <label>Pavardė</label>
-            <hr>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
-            Trūksta pavardės
-        </p>
-        <fieldset>
-            <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
-            <label>El. paštas</label>
-            <hr>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
-            El. paštas netinkamas</p>
-        <fieldset>
-            <input type="password" name="password" placeholder="Slaptažodis" ng-model="user.password" required/>
-            <label>Slaptažodis</label>
-            <hr>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
-            Slaptažodis negali būti tuščias
-        </p>
-        <button type="submit" ng-disabled="myform.$invalid" class="btn">Register</button>
-        <p>or <a ng-href="#/login">Login</a></p>
-    </form>
-</section>
+<form name="myform" novalidate ng-submit="register()">
+    <div class="textintro">
+        <h1>Registracija</h1>
+    </div>
+    <fieldset>
+        <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
+        <label>Vardas</label>
+        <hr>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+        Trūksta vardo
+    </p>
+    <fieldset>
+        <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
+        <label>Pavardė</label>
+        <hr>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+        Trūksta pavardės
+    </p>
+    <fieldset>
+        <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
+        <label>El. paštas</label>
+        <hr>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
+        El. paštas netinkamas</p>
+    <fieldset>
+        <input type="password" name="password" placeholder="Slaptažodis" ng-model="user.password" required/>
+        <label>Slaptažodis</label>
+        <hr>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
+        Slaptažodis negali būti tuščias
+    </p>
+    <button type="submit" ng-disabled="myform.$invalid" class="btn">Registruotis</button>
+    <p>arba <a ng-href="#/login">Prisijunk</a></p>
+</form>

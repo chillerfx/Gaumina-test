@@ -1,5 +1,100 @@
-<div class="card meetings cf">
-  <div class="textintro">
-    <h1>{{message}}</h1>
-  </div>
-</div>
+<h1>Suveskite asmeninius duomenis</h1>
+<form class="dataform" name="dataForm" novalidate ng-submit="register()">
+    <fieldset>
+        <input accept=" image/*">
+        <label ></label>
+    </fieldset>
+    <fieldset>
+        <input type="text" name="education" placeholder="Išsilavinimas" ng-model="user.education" required/>
+        <label>Išsilavinimas</label>
+    </fieldset>
+    <fieldset>
+        <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
+        <label>Vardas</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+        Trūksta vardo
+    </p>
+
+    <fieldset>
+        <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
+        <label>Pavardė</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+        Trūksta pavardės
+    </p>
+    <fieldset>
+        <input type="date" name="birthday"  ng-model="user.birthday" required/>
+        <label>Gimimo data</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+        Trūksta pavardės
+    </p>
+    <legend>Gimtoji kalba:</legend>
+    <fieldset>
+        <input value="lt" type="checkbox" checked="checked" name="lt" id="lt" ng-model="user.language.lt"/>
+        <label for="lt">LT</label>
+    </fieldset>
+    <fieldset>
+        <input value="en" type="checkbox" name="en" id="en" ng-model="user.language.en" />
+        <label for="en">EN</label>
+    </fieldset>
+    <fieldset>
+        <input value="ru" type="checkbox" name="ru" id="ru" ng-model="user.language.ru" />
+        <label for="ru">RU</label>
+    </fieldset>
+    <fieldset>
+        <select ng-model="user.city" >
+            <option value="" disabled="disabled" selected="selected">Gyvenamoji vieta</option>
+            <option value="klaipeda">Klaipėda</option>
+            <option value="vilnius">Vilnius</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <input type="phone" name="phone" placeholder="Telefono nr." ng-model="user.phone" required/>
+        <label>Telefono nr.</label>
+    </fieldset>
+    <fieldset>
+        <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
+        <label>El. paštas</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
+        El. paštas netinkamas</p>
+    <legend>Lytis</legend>
+    <fieldset>
+        <input type="radio" name="gender" id="male" ng-model="user.gender" value="m"/>
+        <label for="male">Vyras</label>
+        <input type="radio" name="gender" id="female" ng-model="user.gender" value="f"/>
+        <label for="female">Moteris</label>
+    </fieldset>
+
+    <h2>Papildoma informacija</h2>
+    <fieldset>
+        <input type="text" name="pq" placeholder="Asmeninės savybės" ng-model="user.pq"/>
+        <label>Asmeninės savybės</label>
+    </fieldset>
+    <fieldset>
+        <input type="text" name="ph" placeholder="Pomėgiai, hobiai" ng-model="user.pq"/>
+        <label>Pomėgiai, hobiai</label>
+    </fieldset>
+    <h2>Paskutinė / daartinė darbovietė</h2>
+    <fieldset>
+        <input type="text" name="ei" placeholder="Organizacijos pavadinimas" ng-model="user.ei"/>
+        <label>Organizacijos pavadinimas</label>
+    </fieldset>
+    <fieldset>
+        <input type="text" name="et" placeholder="Statusas organizacijoje" ng-model="user.et"/>
+        <label>Statusas organizacijoje</label>
+    </fieldset>
+    <legend>Laikotarpis</legend>
+    <fieldset>
+        <input type="month" placeholder="Nuo">
+        <label>Nuo</label>
+    </fieldset>
+    <fieldset>
+        <input type="month" placeholder="Nuo">
+        <label>Iki</label>
+    </fieldset>
+    <button type="submit" ng-disabled="myform.$invalid" class="btn">Siūsti užklausą</button>
+</form>

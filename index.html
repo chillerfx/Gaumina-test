@@ -5,6 +5,7 @@
     Angular Registration
   </title>
   <meta name="viewport" content="width=device-width" user-scalable="no">
+  <meta characters="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
   <link rel="stylesheet" href="css/style.css" type="text/css"/>
@@ -28,11 +29,7 @@
 -->
   <div class="flex-container" >
     <div class="row ">
-      <div class="flex-item userinfo" ng-show="currentUser" ng-controller="RegistrationController">
-        <span class="userinfo">Hi {{currentUser.first_name}}</span>
-        <a ng-href="#login" ng-click="logout()">LOG OUT</a>
-      </div>
-      <main ng-view class="flex-item cf">
+      <main ng-view class="flex-item cf"/>
     </div>
   </div>
 </body>

@@ -26,8 +26,9 @@ body {
 }
 h1 {
     color: white;
-    padding: 29px;
+    padding: 0  0 29px 0;
     font-size: 21px;
+    font-weight: 400;
 }
 button {
     color:white;
@@ -42,10 +43,10 @@ p {
 a {
     color: #0ca890;
 }
-form {
-    margin: 20px;
+form, section {
     padding: 20px;
 }
+
 fieldset {
     position: relative;
     padding: 0;
@@ -65,6 +66,12 @@ fieldset input {
     font-size: 120%;
     outline: none;
     cursor: text;
+}
+fieldset input[type=date] {
+    color:transparent;
+}
+fieldset input[date]:focus {
+    color:#607D8B;
 }
 fieldset input::-webkit-input-placeholder {
     -webkit-transition: color 300ms ease;
@@ -117,6 +124,9 @@ fieldset input:focus ~ label,
 fieldset input:valid ~ label {
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
+}
+.dataform {
+    background: white;
 }
 .flex-container {
     height: 100%;

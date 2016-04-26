@@ -1,25 +1,23 @@
-<section class="card login">
-    <form name="myform" ng-submit="login()" novalidate>
-        <div class="textintro">
-            <h1>Dalyvaukite atrankoje</h1>
-            <p class="message" ng-show="message">{{message}}</p>
-        </div>
-        <fieldset>
-            <input type="email" name="email " placeholder="El. paštas" ng-model="user.email" ng-required="true"/>
-            <hr>
-            <label>El. paštas</label>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
-        El. paštas turi būti validus</p>
-        <fieldset>
-            <input type="password" name="password" ng-model="user.password" placeholder="Slaptažodis"
-                   ng-required="true"/>
-            <hr>
-            <label>Slaptažodis</label>
-        </fieldset>
-        <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
-            Slaptažodis negali būti tuščias</p>
-        <button type="submit" class="btn" ng-disabled="myform.$invalid">Prisijungti</button>
-        <p>arba <a ng-href="#/register">užsiregistruokite</a></p>
-    </form>
-</section>
+<form name="myform" ng-submit="login()" novalidate>
+    <div class="textintro">
+        <h1>Dalyvaukite atrankoje</h1>
+        <p class="message" ng-show="message">{{message}}</p>
+    </div>
+    <fieldset>
+        <input type="email" name="email " placeholder="El. paštas" ng-model="user.email" ng-required="true"/>
+        <hr>
+        <label>El. paštas</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.email.$invalid && myform.email.$touched">
+    El. paštas turi būti validus</p>
+    <fieldset>
+        <input type="password" name="password" ng-model="user.password" placeholder="Slaptažodis"
+               ng-required="true"/>
+        <hr>
+        <label>Slaptažodis</label>
+    </fieldset>
+    <p class="error validationerror" ng-show="myform.password.$invalid && myform.password.$touched">
+        Slaptažodis negali būti tuščias</p>
+    <button type="submit" class="btn" ng-disabled="myform.$invalid">Prisijungti</button>
+    <p>arba <a ng-href="#/register">užsiregistruokite</a></p>
+</form>
