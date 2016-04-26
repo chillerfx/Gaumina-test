@@ -14,23 +14,15 @@
   <script src="js/libs/js/angular_route.js"></script>
   <script src="js/libs/js/firebase.js"></script>
   <script src="js/libs/js/angularfire.min.js"></script>
+  <script src="js/libs/js/ng-flow-standalone.min.js"></script>
 
   <script src="app.js"></script>
 
   <script src="js/controller/registration.js"></script>
-  <script src="js/controller/success.js"></script>
+  <script src="js/controller/formController.js"></script>
   <script src="services/authentication.js"></script>
 </head>
 <body>
-<!--
-  <header>
-    <nav class="cf" ng-include="'views/nav.html'"></nav>
-  </header>
--->
-  <div class="flex-container" >
-    <div class="row ">
-      <main ng-view class="flex-item cf"/>
-    </div>
-  </div>
+      <main ng-view class="cf"/>
 </body>
 </html>

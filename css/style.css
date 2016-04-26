@@ -1,3 +1,7 @@
+*
+{
+    box-sizing: border-box;
+}
 html, body {
     height: 100%;
 }
@@ -26,7 +30,6 @@ body {
 }
 h1 {
     color: white;
-    padding: 0  0 29px 0;
     font-size: 21px;
     font-weight: 400;
 }
@@ -43,10 +46,14 @@ p {
 a {
     color: #0ca890;
 }
-form, section {
+section {
     padding: 20px;
 }
-
+form {
+    background: #354052;
+    padding: 0;
+    border-radius: 5px;
+}
 fieldset {
     position: relative;
     padding: 0;
@@ -106,7 +113,7 @@ fieldset input:focus ~ hr {
     transform: scaleX(1);
     visibility: visible;
 }
-fieldset label {
+fieldset label, fieldset legend {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -125,29 +132,73 @@ fieldset input:valid ~ label {
     -webkit-transform: scale(0.6);
     transform: scale(0.6);
 }
-.dataform {
+/*.dataform {
     background: white;
-}
-.flex-container {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+}*/
+main {
+    max-width: 1200px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+select {
+    border: 1px solid #e2e2e2;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    padding: 55px 55px 15px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color:white;
 }
-.row {
-    border-radius: 5px;
-    width: auto;
-    background-color:#354052;
+.dialog-header, .dialog-footer {
+    text-align: center;
+    margin: 0 auto;
+    flex-basis: 100%;
+    width: 340px;
+    padding-bottom: 20px;
+}
+.container > .flex-item {
+    height: 275px;
 }
 .flex-item {
+    align-self: flex-start;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
+.f1, .f2, .f3 {
+    flex-basis: 33%;
+}
+.f4 {
+    flex-basis: 66%;
+}
+.form {
+    max-width: 340px;
+}
+.inline-block {
+    display: inline-block !important;
+}
+.radio-label {
+    display: inline-block !important;
+    vertical-align: top !important;
+    margin-right: 3% !important;
+}
+.radio-input {
+    display: inline-block !important;
+    vertical-align: top !important;
+}
+
+
 .error {
     color: red;
     margin:0px;

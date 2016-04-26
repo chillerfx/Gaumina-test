@@ -26,10 +26,10 @@ myApp.config(['$routeProvider',function($routeProvider)
 		templateUrl:'views/register.html',
 		controller:'RegistrationController'
 	})
-	.when('/success',
+	.when('/application',
 	{
-		templateUrl:'views/success.html',
-		controller:'SuccessController',
+		templateUrl:'views/applicationForm.html',
+		controller:'formController',
 		resolve:{
 			currentAuth:function(Authentication)
 			{

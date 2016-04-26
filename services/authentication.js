@@ -19,7 +19,7 @@ myApp.factory("Authentication", ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', 
                 email: user.email,
                 password: user.password
             }).then(function (regUser) {
-                $location.path('/success');
+                $location.path('/application');
             }).catch(function (error) {
                 $rootScope.message = error.message;
 
