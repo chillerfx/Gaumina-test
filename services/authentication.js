@@ -22,12 +22,15 @@ myApp.factory("Authentication", ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', 
                 $location.path('/application');
             }).catch(function (error) {
                 $rootScope.message = error.message;
-
             });
             $rootScope.message = "Welcome " + user.email;
         },
         requireAuth: function () {
-            return auth.$requireAuth();
+            if(auth.$getAuth()){
+                return auth.$requireAuth();
+            } else {
+                return $location.path('/login')
+            }
         },//require Authentication
         logout: function () {
             auth.$unauth();
@@ -43,12 +46,23 @@ myApp.factory("Authentication", ['$rootScope', '$firebaseAuth', 'FIREBASE_URL', 
                     first_name: user.firstname,
                     last_name: user.lastname,
                     email: user.email
-                });//Storing User info in Firebase
+                });
                 $rootScope.message = "Hi " + user.firstname + ",Thanks for registering";
             }).catch(function (error) {
-
                 $rootScope.message = error.message;
             });
+        },
+        submitApplication: function(user) {
+            $rootScope.message = "trying to submit form...";
+            console.log(user);
+            /*auth.$getAuth().then(function (regUser) {
+                console.log('sucess'+ regUsr);
+                $location.path('/application');
+            }).catch(function (error) {
+                $rootScope.message = error.message;
+            });*/
+            $rootScope.message = "Welcome " + $scope.currentUser.email;
+            console.log();
         }
     };
 }

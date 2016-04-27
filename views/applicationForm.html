@@ -1,26 +1,27 @@
-<form class="dataform flex-container" name="dataForm" novalidate ng-submit="submit()">
+<form class="dataform flex-container" name="dataForm" novalidate ng-submit="submitApplication()">
     <div class="dialog-header">
         <h1>Suveskite asmeninius duomenis</h1>
+        <p>{{message}}</p>
     </div>
     <div class="container">
     <div class="flex-item f1">
         <fieldset class="material">
-            <input type="text" name="education" placeholder="Išsilavinimas" ng-model="user.education" required/>
+            <input type="text" name="education" placeholder="Išsilavinimas" ng-model="currentUser.education" required/>
             <hr>
             <label>Išsilavinimas</label>
         </fieldset>
         <fieldset class="material">
-            <input type="text" name="firstname" placeholder="Vardas" ng-model="user.firstname" required/>
+            <input type="text" name="firstname"  ng-model="currentUser.first_name" required/>
             <hr>
             <label>Vardas</label>
         </fieldset>
         <fieldset class="material">
-            <input type="text" name="lastname" placeholder="Pavardė" ng-model="user.lastname" required/>
+            <input type="text" name="lastname" placeholder="Pavardė" ng-model="currentUser.last_name" required/>
             <hr>
             <label>Pavardė</label>
         </fieldset>
         <fieldset class="material">
-            <input type="date" name="birthday" ng-model="user.birthday" required/>
+            <input type="date" name="birthday" ng-model="currentUser.birthday" required/>
             <hr>
             <label>Gimimo data</label>
         </fieldset>
@@ -32,7 +33,7 @@
                 <input class="radio-input" type="radio" name="gender" id="male" ng-model="user.gender" value="m"/>
             </label>
             <label class="radio-label"  for="female">Moteris
-                <input class="radio-input" type="radio" name="gender" id="female" ng-model="user.gender" value="f"/>
+                <input class="radio-input" type="radio" name="gender" id="female" ng-model="currentUser.gender" value="f"/>
             </label>
             </div>
         </fieldset>
@@ -41,29 +42,29 @@
     <div class="flex-item f2">
         <fieldset>
             <legend>Gimtoji kalba:</legend>
-            <input value="lt" type="checkbox" checked="checked" name="lt" id="lt" ng-model="user.language.lt"/>
+            <input value="lt" type="checkbox" checked="checked" name="lt" id="lt" ng-model="currentUser.language.lt"/>
             <label for="lt">LT</label>
 
-            <input value="en" type="checkbox" name="en" id="en" ng-model="user.language.en"/>
+            <input value="en" type="checkbox" name="en" id="en" ng-model="currentUser.language.en"/>
             <label for="en">EN</label>
 
-            <input value="ru" type="checkbox" name="ru" id="ru" ng-model="user.language.ru"/>
+            <input value="ru" type="checkbox" name="ru" id="ru" ng-model="currentUser.language.ru"/>
             <label for="ru">RU</label>
         </fieldset>
         <fieldset class="material">
-            <select ng-model="user.city">
+            <select ng-model="currentUser.city">
                 <option value="" disabled="disabled" selected="selected">Gyvenamoji vieta</option>
                 <option value="klaipeda">Klaipėda</option>
                 <option value="vilnius">Vilnius</option>
             </select>
         </fieldset>
         <fieldset class="material">
-            <input type="phone" name="phone" placeholder="Telefono nr." ng-model="user.phone" required/>
+            <input type="phone" name="phone" placeholder="Telefono nr." ng-model="currentUser.phone" required/>
             <hr>
             <label>Telefono nr.</label>
         </fieldset>
         <fieldset class="material">
-            <input type="email" name="email" placeholder="El. paštas" ng-model="user.email" required/>
+            <input type="email" name="email" placeholder="El. paštas" ng-model="currentUser.email" required/>
             <hr>
             <label>El. paštas</label>
         </fieldset>
@@ -77,12 +78,12 @@
     <div class="flex-item f4">
     <h2>Papildoma informacija</h2>
     <fieldset class="material">
-        <input type="text" name="pq" placeholder="Asmeninės savybės" ng-model="user.pq" required/>
+        <input type="text" name="pq" placeholder="Asmeninės savybės" ng-model="currentUser.pq" required/>
         <hr>
         <label>Asmeninės savybės</label>
     </fieldset>
     <fieldset class="material">
-        <input type="text" name="ph" placeholder="Pomėgiai, hobiai" ng-model="user.pq" required/>
+        <input type="text" name="ph" placeholder="Pomėgiai, hobiai" ng-model="currentUser.pq" required/>
         <hr>
         <label>Pomėgiai, hobiai</label>
     </fieldset>
@@ -90,33 +91,34 @@
     <div class="flex-item f5">
     <h2>Paskutinė / dabartinė darbovietė</h2>
     <fieldset class="material">
-        <input type="text" name="ei" placeholder="Organizacijos pavadinimas" ng-model="user.ei" required/>
+        <input type="text" name="ei" placeholder="Organizacijos pavadinimas" ng-model="currentUser.ei" required/>
         <hr>
         <label>Organizacijos pavadinimas</label>
     </fieldset>
     <fieldset class="material">
-        <input type="text" name="et" placeholder="Statusas organizacijoje" ng-model="user.et" required/>
+        <input type="text" name="et" placeholder="Statusas organizacijoje" ng-model="currentUser.et" required/>
         <hr>
         <label>Statusas organizacijoje</label>
     </fieldset>
     <legend>Laikotarpis</legend>
     <fieldset class="material">
-        <input type="month" placeholder="Nuo" ng-model="user.from">
+        <input type="month" placeholder="Nuo" ng-model="currentUser.from">
         <label>Nuo</label>
     </fieldset>
     <fieldset class="material">
-        <input type="month" placeholder="Nuo" ng-model="user.till">
+        <input type="month" placeholder="Nuo" ng-model="currentUser.till">
         <label>Iki</label>
     </fieldset>
     <fieldset >
         <label class="fw">
-            <input type="checkbox" ng-model="user.sw">
+            <input type="checkbox" ng-model="currentUser.sw">
             <span class="flipswitch"></span>
         </label>
     </fieldset>
     </div>
     <div class="dialog-footer">
-        <button type="submit" ng-disabled="myform.$invalid" class="btn">Siūsti užklausą</button>
+        <button type="submit" class="btn">Siūsti užklausą</button>
+        <!--ng-disabled="myform.$invalid"-->
     </div>
     </div>
 </form>

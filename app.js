@@ -32,8 +32,8 @@ myApp.config(['$routeProvider',function($routeProvider)
 		controller:'RegistrationController',
 		resolve:{
 			currentAuth:function(Authentication)
-			{
-				return Authentication.requireAuth();
+            {
+                return Authentication.requireAuth();
 			}
 		}
 

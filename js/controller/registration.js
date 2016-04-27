@@ -11,4 +11,8 @@ angular.module('myApp').controller("RegistrationController",['$scope','Authentic
   {
   	Authentication.logout();
   }
+  $scope.submitApplication=function()
+  {
+    Authentication.submitApplication($scope.user);
+  }
 }]);
