@@ -55,6 +55,7 @@ form {
     border-radius: 5px;
 }
 fieldset {
+    border: none;
     min-width: 355px;
 }
 .material {
@@ -64,7 +65,7 @@ fieldset {
     border: none;
     overflow: visible;
 }
-.material input {
+.material input,.material select {
     background-color: transparent;
     box-sizing: border-box;
     width: 100%;
@@ -188,9 +189,6 @@ legend {
 .f4 {
     flex-basis: 66%;
 }
-.form {
-    max-width: 340px;
-}
 .inline-block {
     display: inline-block !important;
 }
@@ -203,7 +201,6 @@ legend {
     display: inline-block !important;
     vertical-align: top !important;
 }
-
 
 .error {
     color: red;
